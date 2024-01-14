@@ -1,0 +1,7 @@
+{
+  "name": "pengunjung-perpustakaan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

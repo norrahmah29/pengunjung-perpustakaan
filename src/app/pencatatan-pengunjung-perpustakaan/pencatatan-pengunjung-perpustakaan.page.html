@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="text-header">
+      <img class="gambar-icons" src="assets/icon/perpustakaan.png" />
+    </ion-title>
+    <ion-title size="large" class="perpustakaan-title">Perpustakaan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> <!-- Tambahkan class ion-padding di sini -->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nama</ion-label>
+        <ion-input type="text" [(ngModel)]="newPengunjung.nama"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">NIM</ion-label>
+        <ion-input type="number" [(ngModel)]="newPengunjung.nim"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Program Studi</ion-label>
+        <ion-input type="text" [(ngModel)]="newPengunjung.prodi"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-button color="success" routerLink="/pencatatan-pengunjung-perpustakaan" expand="block" class="ion-padding"
+          (click)="tambah()">
+          <ion-icon name="person-add"> </ion-icon> <ion-text class="ion-margin-start">Tambah</ion-text></ion-button>
+
+        <ion-button color="danger" routerLink="/home" expand="block" class="ion-padding" (click)="tambahPengunjung()">
+          <ion-icon name="arrow-back"> </ion-icon> <ion-text class="ion-margin-start">Kembali</ion-text> </ion-button>
+      </ion-row>
+    </ion-list>
+  </ion-content>
+</ion-content>

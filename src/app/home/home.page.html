@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      PENGUNJUNG PERPUSTAKAAN
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let data of dataPengunjung" lines="full">
+    <ion-item>
+      <ion-label>{{data.nama}} - {{data.nim}} - {{data.prodi }}<ion-button color="danger" class="ion-padding"><ion-icon
+            name="trash"> </ion-icon> <ion-text class="ion-margin-start" (click)="hapus(data.id)">Hapus</ion-text>
+        </ion-button></ion-label>
+    </ion-item>
+  </ion-list>
+  <div class='ion-text-end'>
+    <ion-button href='/pencatatan-pengunjung-perpustakaan' fill="solid">Tambah</ion-button>
+  </div>
+</ion-content>
